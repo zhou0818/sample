@@ -52,4 +52,15 @@ class User extends Model implements
         $hash = md5(strtolower(trim($this->attributes['email'])));
         return "http://cn.gravatar.com/avatar/$hash?s=$size";
     }
+
+    public function statuses()
+   {
+       return $this->hasMany(Status::class);
+   }
+
+   public function feed()
+    {
+        return $this->statuses()
+                    ->orderBy('created_at', 'desc');
+    }
 }

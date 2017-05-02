@@ -1,83 +1,83 @@
- @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
- $navbar-color: #3c3e42;
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+$navbar-color: #3c3e42;
+/* universal */
+body {
+  padding-top: 60px;
+}
 
- /* universal */
+section {
+  overflow: auto;
+}
 
- body {
-   padding-top: 60px;
- }
+textarea {
+  resize: vertical;
+}
 
- section {
-   overflow: auto;
- }
+.jumbotron {
+  text-align: center;
+}
 
- textarea {
-   resize: vertical;
- }
+.alert-status {
+  @extend .alert-info;
+}
+/* typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+}
 
- .jumbotron {
-   text-align: center;
- }
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
 
- .alert-status {
-   @extend .alert-info;
- }
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
 
- /* typography */
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+/* header */
+.navbar-inverse {
+  background-color: $navbar-color;
+}
 
- h1, h2, h3, h4, h5, h6 {
-   line-height: 1;
- }
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
 
- h1 {
-   font-size: 3em;
-   letter-spacing: -2px;
-   margin-bottom: 30px;
-   text-align: center;
- }
+  &:hover {
+    color: #fff;
+  }
+}
 
- h2 {
-   font-size: 1.2em;
-   letter-spacing: -1px;
-   margin-bottom: 30px;
-   text-align: center;
-   font-weight: normal;
-   color: #777;
- }
-
- p {
-   font-size: 1.1em;
-   line-height: 1.7em;
- }
-
- /* header */
-
- .navbar-inverse {
-   background-color: $navbar-color;
- }
-
- #logo {
-   float: left;
-   margin-right: 10px;
-   font-size: 1.7em;
-   color: #fff;
-   text-decoration: none;
-   letter-spacing: -1px;
-   padding-top: 9px;
-   font-weight: bold;
-   &:hover {
-     color: #fff;
-   }
- }
- #logout {
+#logout {
   cursor: default;
+
   &:hover {
     background-color: transparent;
   }
 }
-
- /* footer */
-
+/* footer */
 footer {
   margin-top: 45px;
   padding-top: 5px;
@@ -116,17 +116,17 @@ footer {
     font-weight: bold;
   }
 }
-
 /* sidebar */
-
 aside {
   section {
     padding: 10px 0;
     margin-top: 20px;
+
     &:first-child {
       border: 0;
       padding-top: 0;
     }
+
     span {
       display: block;
       margin-bottom: 3px;
@@ -139,10 +139,12 @@ section.user_info {
   padding-bottom: 10px;
   margin-top: 20px;
   text-align: center;
+
   .gravatar {
     float: none;
     max-width: 70px;
   }
+
   h1 {
     font-size: 1.4em;
     letter-spacing: -1px;
@@ -157,11 +159,11 @@ section.user_info {
   max-width: 50px;
   border-radius: 50%;
 }
-
-
 /* forms */
-
-input, textarea, select, .uneditable-input {
+.uneditable-input,
+input,
+select,
+textarea {
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
@@ -174,24 +176,22 @@ input {
 .panel {
   margin-top: 50px;
 }
-
 /* Users edit */
-
 .gravatar_edit {
   margin: 15px auto;
   text-align: center;
+
   .gravatar {
     float: none;
     max-width: 100px;
   }
 }
-
 /* Users index */
-
 .users {
   list-style: none;
   margin: 0;
   padding-left: 0;
+
   li {
     overflow: auto;
     padding: 10px 0;
@@ -203,4 +203,62 @@ input {
   float: right;
   position: relative;
   right: 0;
+}
+/* statuses */
+.statuses {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+    position: relative;
+  }
+
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+
+  .content {
+    display: block;
+    margin-left: 60px;
+    word-break: break-word;
+
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+
+  .gravatar {
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  form {
+    button.status-delete-btn {
+      position: absolute;
+      right: 0;
+      top: 10px;
+    }
+  }
+}
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+.status_form {
+  margin-top: 20px;
 }
